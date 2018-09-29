@@ -1,5 +1,6 @@
 package com.example.varungupta.election;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -19,13 +20,15 @@ import java.io.InputStreamReader;
 
 public class Result extends AppCompatActivity {
     TextView tv;
+    BufferedReader reader;
+    InputStream is;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        tv=(TextView)findViewById(R.id.textView5);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-
+        tv=(TextView)findViewById(R.id.textView5);
         String cname = getIntent().getStringExtra("party");
+        char[] carr= cname.toCharArray();
 
         ImageView im = (ImageView) findViewById(R.id.imageView);
         int[] vArray = new int[10];
@@ -44,13 +47,13 @@ public class Result extends AppCompatActivity {
         bArray[5] = R.drawable.b5;
 
 
-        if (cname.substring(0, 1).equalsIgnoreCase("v")) {
+        if (carr[0]=='v') {
             for (int i = 1; i <= 6; i++) {
                 if (("" + i).equalsIgnoreCase(cname.substring(1)))
                     im.setImageResource(vArray[i]);
             }
         }
-        if (cname.substring(0, 1).equalsIgnoreCase("b")) {
+        if (carr[0]=='b') {
             for (int i = 1; i <= 5; i++) {
                 if (("" + i).equalsIgnoreCase(cname.substring(1)))
                     im.setImageResource(bArray[i]);
@@ -58,63 +61,67 @@ public class Result extends AppCompatActivity {
         }
         String city;
         int limit;
-        if (cname.substring(0, 1).equalsIgnoreCase("v")) {
+        if (carr[0]=='v') {
             city = "vellore";
+            Toast.makeText(getApplicationContext(),"THIS IS VELLORE",Toast.LENGTH_LONG);
             limit = 6;
 
         } else {
             city = "bram";
+            Toast.makeText(getApplicationContext(),"THIS IS BRAM",Toast.LENGTH_LONG);
             limit = 5;
 
         }
 
         final int a=limit;
-       /* String[] word = new String[50];
+        String[] word = new String[50];
         String[] arr = new String[20];
-        String cname2=getIntent().getStringExtra("output");
-        InputStream is = getResources().openRawResource(R.raw.party);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        is = getResources().openRawResource(R.raw.party);
+        reader = new BufferedReader(new InputStreamReader(is));
         String line= null;
         try {
             line = reader.readLine();
-            if(cname2.toLowerCase().charAt(0)=='b')
+            if(city=="vellore")
+                word = line.split(",", 2);
+            else{
                 line=reader.readLine();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
         word = line.split(",", 2);
-        arr = word[1].split(",");
-        int i = 1;
-        StringBuilder builder = new StringBuilder();
-        for (String details : arr) {
-            builder.append(i + ". " + details + "\n");
-            Toast.makeText(Result.this,details,Toast.LENGTH_SHORT);
-            i++;
-        }
-        //tv.append(builder);*/
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(city);
-        ref.addListenerForSingleValueEvent(
-                new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        StringBuilder sb=new StringBuilder();
+        arr=word[1].split(",");
 
-                        for(int i=1;i<=a;i++) {
 
-                            String s = (String) dataSnapshot.child(""+i).getValue();
-                            sb.append("Team " +i+": " + s+"\n");
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference(city);
+        final String[] finalWord = arr;
+        myRef.addValueEventListener(new ValueEventListener() {
+            StringBuilder sb= new StringBuilder();
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        }
-                        //tv=(TextView)findViewById(R.id.textView5);
-                        tv.append(sb);
-                    }
+                for(int i=1;i<=a;i++)
+                {
+                    String s= dataSnapshot.child(Integer.toString(i)).getValue().toString();
+                    sb.append(finalWord[i-1]+" : "+s+" \n");
+                }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        //handle databaseError
-                    }
-                });
+                tv.setText(sb);
+            }
 
+
+
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(Result.this, "error", Toast.LENGTH_SHORT).show();
+
+            }
+
+        });
 
 
 
@@ -122,7 +129,13 @@ public class Result extends AppCompatActivity {
 
 
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        Intent in = new Intent(Result.this,loginScreen.class);
+        startActivity(in);
+        Result.this.overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 
     }
 }
