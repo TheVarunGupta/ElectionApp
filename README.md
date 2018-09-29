@@ -2,21 +2,16 @@
 <html>
 <body>
 
-<h1> Water Contamination Analysis using Hadoop and visualization using sci-kit</h1>
+<h1> Election Commission Application:</h1>
 <hr>
 <p> I retrieve data of water contamination levels in india over a period of 4 years and use map reduce on it to get desirable knowledge out of it. I then normalize and visualize the data using sci-kit and Matplotlib library in python.</p>
 
 <h3>Prerequisites & Software Required</h3>
 <p>
 <ul style="list-style-type:disc">
-    <li>Python</li>
-    <li>Scikit-learn</li>
-    <li>Matplotlib</li>
-    <li>Pandas</li>
-    <li>Seaborn</li>
-    <li>Hadoop Commands</li>
-    <li>Jupyter Notebook</li>
-    <li>Oracle VM VirtualBox</li>
+    <li>JAVA</li>
+    <li>Android Studio</li>
+    <li>Android phone with API 21 and Above</li>
 </ul>
 </p>
 
