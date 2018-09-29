@@ -18,24 +18,23 @@
 <h3>Database</h3>
 
 <p>The database is stored in form of a large JSON document on Firebase and an integration is performed between the database and the android app. <br>
-    Apart from this, the data of parties in the various states is stored in the form of a structured CSV delimited file.
+    Apart from this, the data of parties in the various states is stored in the form of a structured CSV delimited file.    
 </p>
 
 
-<h3>Hadoop Commands Used</h3>
+<h3>Activities:</h3>
 <ul style="list-style-type:disc">
-    <li>Hadoop fs -put (filename)</li>
-        <p>This command puts the file into HDFS. We use it to put our dataset into the cluster.</p>
-    <li>Hadoop fs -get (folder/file name)</li>
-        <p> This command get the file/folder from hdfs and puts it into your pc. We use this to retrieve the results for further use in JupyterNotebook.</p>
-    <li>Hadoop fs -cat (filename)</li>
-        <p> This command is used to read the output retrieved after executing map reduce functions.</p>
-    <li> hs (mapper filename) (reducer filename) (input filename) (output filename)</li>
-        <p> This command is an alias provided by cloudera that is used to execute the map reduce function.</p>
-    <li>Hadoop fs -rm (filename)</li>
-        <p> This command is used to delete any non-empty folder/ any file in the HDFS.</p>
-    <li>Hadoop fs -rmr (foldername)</li>
-        <p> This command is used to recursively delete files inside a folder.</p>
+    <li>SplashScreen</li>
+        <p>This activity is used to display an image as a logo with the help of various animations</p>
+    <li>LoginScreen</li>
+        <p> This activity is used to get information from the user and get verification from the database.</p>
+    <li>SelectConstituency</li>
+        <p> This activity displays various constituency from where the user can vote and the further activities also depend on what the user selects.</p>
+    <li> Voting</li>
+        <p> Here the various parties are shown in the constituency that the user selected in previous class.</p>
+    <li>Result</li>
+        <p> This activity displays the result that you have voted for which party and what is the current result of the election.</p>
+    
 </ul>
 
 <h3>Data Achieved:</h3>
