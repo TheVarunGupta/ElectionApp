@@ -18,10 +18,9 @@
 <h3>Database</h3>
 
 <p>The database is stored in form of a large JSON document on Firebase and an integration is performed between the database and the android app. <br>
-    Apart from this, the data of parties in the various states is stored in the form of a structured CSV delimited file. You can see the screenshot here:
+    Apart from this, the data of parties in the various states is stored in the form of a structured CSV delimited file. You can see the screenshot here for reference of the data is stored:
 </p>
-<a href="https://ibb.co/nwDjKK"><img src="https://preview.ibb.co/mnm4KK/Database.jpg" alt="Database" border="0"></a>
-
+<a href="https://ibb.co/ikqp3e"><img src="https://preview.ibb.co/fZeSpK/Database.png" alt="Database" border="0"></a>
 
 
 <h3>Activities:</h3>
@@ -38,12 +37,14 @@
         <p> This activity displays the result that you have voted for which party and what is the current result of the election.</p>
     
 </ul>
-<h3>Screenshots:</h3>
-    <a href="https://imgbb.com/"><img src="https://image.ibb.co/b92iDe/1.jpg" alt="1" border="0" width="200" height="400"></a>
-    <a href="https://imgbb.com/"><img src="https://image.ibb.co/jeNYDe/2a.jpg" alt="2a" border="0"></a>
-    <a href="https://imgbb.com/"><img src="https://image.ibb.co/gy7deK/2b.jpg" alt="2b" border="0"></a>
-    <a href="https://imgbb.com/"><img src="https://image.ibb.co/jYTvRz/3.jpg" alt="3" border="0"></a>
-    <a href="https://imgbb.com/"><img src="https://image.ibb.co/b0aaRz/4.jpg" alt="4" border="0"></a>
 
+<h3>Screenshots:</h2>
+    <a href="https://ibb.co/nP4SpK"><img src="https://preview.ibb.co/mzCrGz/1.png" alt="1" border="0" height="400" width="250"></a>
+    <a href="https://ibb.co/bwZSpK"><img src="https://preview.ibb.co/gDwwie/2a.png" alt="2a" border="0" height="400" width="250"></a>
+    <a href="https://ibb.co/fieGie"><img src="https://preview.ibb.co/cWUtUK/2b.png" alt="2b" border="0" height="400" width="250"></a>
+    <a href="https://ibb.co/hf1wie"><img src="https://preview.ibb.co/e6hf9K/3.png" alt="3" border="0" height="400" width="250"></a>
+    <a href="https://ibb.co/dDDWGz"><img src="https://preview.ibb.co/iVa09K/4.png" alt="4" border="0" height="400" width="250"></a>
+    
+    <p>This image shows the normalized data, it shows for each element what the trend it folows. That is, how much it's occurence in our country has changed over the course of four years. For more details, you can refer to the report included in the repository. It shows more detailed analysis of the data with more images showing how the trend for individual element has changed. </p>
 </body>
 </html>
