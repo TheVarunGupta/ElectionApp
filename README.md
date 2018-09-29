@@ -39,12 +39,17 @@
 </ul>
 
 <h3>Screenshots:</h2>
-    <a href="https://ibb.co/nP4SpK"><img src="https://preview.ibb.co/mzCrGz/1.png" alt="1" border="0" height="400" width="250"></a>
-    <a href="https://ibb.co/bwZSpK"><img src="https://preview.ibb.co/gDwwie/2a.png" alt="2a" border="0" height="400" width="250"></a>
-    <a href="https://ibb.co/fieGie"><img src="https://preview.ibb.co/cWUtUK/2b.png" alt="2b" border="0" height="400" width="250"></a>
-    <a href="https://ibb.co/hf1wie"><img src="https://preview.ibb.co/e6hf9K/3.png" alt="3" border="0" height="400" width="250"></a>
-    <a href="https://ibb.co/dDDWGz"><img src="https://preview.ibb.co/iVa09K/4.png" alt="4" border="0" height="400" width="250"></a>
+    <p>Login Screen</p>
+    <a href="https://ibb.co/nP4SpK"><img src="https://preview.ibb.co/mzCrGz/1.png" alt="1" border="0" height="430" width="250"></a>
+    <p>Constituency Screen</p>
+    <a href="https://ibb.co/bwZSpK"><img src="https://preview.ibb.co/gDwwie/2a.png" alt="2a" border="0" height="430" width="250"></a>
+    <p>Constituency disabled Screen</p>
+    <a href="https://ibb.co/fieGie"><img src="https://preview.ibb.co/cWUtUK/2b.png" alt="2b" border="0" height="430" width="250"></a>
+    <p>Voting Screen</p>
+    <a href="https://ibb.co/hf1wie"><img src="https://preview.ibb.co/e6hf9K/3.png" alt="3" border="0" height="430" width="250"></a>
+    <p>Result Screen</p>
+    <a href="https://ibb.co/dDDWGz"><img src="https://preview.ibb.co/iVa09K/4.png" alt="4" border="0" height="430" width="250"></a>
     
-    <p>This image shows the normalized data, it shows for each element what the trend it folows. That is, how much it's occurence in our country has changed over the course of four years. For more details, you can refer to the report included in the repository. It shows more detailed analysis of the data with more images showing how the trend for individual element has changed. </p>
+   
 </body>
 </html>
