@@ -13,11 +13,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class Result extends AppCompatActivity {
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        tv=(TextView)findViewById(R.id.textView5);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
@@ -65,6 +69,29 @@ public class Result extends AppCompatActivity {
         }
 
         final int a=limit;
+       /* String[] word = new String[50];
+        String[] arr = new String[20];
+        String cname2=getIntent().getStringExtra("output");
+        InputStream is = getResources().openRawResource(R.raw.party);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        String line= null;
+        try {
+            line = reader.readLine();
+            if(cname2.toLowerCase().charAt(0)=='b')
+                line=reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        word = line.split(",", 2);
+        arr = word[1].split(",");
+        int i = 1;
+        StringBuilder builder = new StringBuilder();
+        for (String details : arr) {
+            builder.append(i + ". " + details + "\n");
+            Toast.makeText(Result.this,details,Toast.LENGTH_SHORT);
+            i++;
+        }
+        //tv.append(builder);*/
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(city);
         ref.addListenerForSingleValueEvent(
                 new ValueEventListener() {
@@ -78,8 +105,8 @@ public class Result extends AppCompatActivity {
                             sb.append("Team " +i+": " + s+"\n");
 
                         }
-                        TextView t=(TextView)findViewById(R.id.textView5);
-                        t.setText(sb);
+                        //tv=(TextView)findViewById(R.id.textView5);
+                        tv.append(sb);
                     }
 
                     @Override
@@ -87,5 +114,15 @@ public class Result extends AppCompatActivity {
                         //handle databaseError
                     }
                 });
+
+
+
+
+
+
+
+
+
+
     }
 }

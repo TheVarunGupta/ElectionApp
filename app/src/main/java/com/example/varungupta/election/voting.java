@@ -95,7 +95,7 @@ public class voting extends AppCompatActivity {
                     Intent intent=new Intent(voting.this,Result.class);
 
                     intent.putExtra("party","v"+voteText);
-
+                    intent.putExtra("output",cname);
                     startActivity(intent);
                     voting.this.overridePendingTransition(R.anim.fadein,R.anim.fadeout);
 
@@ -122,6 +122,7 @@ public class voting extends AppCompatActivity {
                     ref.child(aadhar).child("con2").setValue(true);
                     Intent intent=new Intent(voting.this,Result.class);
                     intent.putExtra("party","b"+voteText);
+                    intent.putExtra("output",cname);
                     startActivity(intent);
                     voting.this.overridePendingTransition(R.anim.fadein,R.anim.fadeout);
 

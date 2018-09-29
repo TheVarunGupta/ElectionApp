@@ -15,6 +15,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         StartAnimations();
+
     }
     private void StartAnimations() {
 
@@ -34,16 +35,19 @@ public class SplashScreen extends AppCompatActivity {
                     }
                     Intent intent = new Intent(SplashScreen.this, loginScreen.class);
                     startActivity(intent);
+                    SplashScreen.this.overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 
 
                 } catch (InterruptedException e) {
                 } finally {
                     SplashScreen.this.finish();
+
                 }
 
             }
         };
         splashTread.start();
+
 
     }
 }

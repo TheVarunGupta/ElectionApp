@@ -1,10 +1,12 @@
 package com.example.varungupta.election;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class selectConstituency extends AppCompatActivity {
 
@@ -23,6 +25,9 @@ public class selectConstituency extends AppCompatActivity {
         if (s1 || s2) {
             vellore.setEnabled(false);
             bharampura.setEnabled(false);
+            vellore.setBackgroundColor(Color.parseColor("#D3D3D3"));
+            bharampura.setBackgroundColor(Color.parseColor("#D3D3D3"));
+            Toast.makeText(getApplicationContext(),"Sorry you have already voted, options are disabled now",Toast.LENGTH_LONG).show();
         }
         vellore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,5 +52,13 @@ public class selectConstituency extends AppCompatActivity {
             }
 
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+    Intent in = new Intent(selectConstituency.this,loginScreen.class);
+    startActivity(in);
+    selectConstituency.this.overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }
