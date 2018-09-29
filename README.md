@@ -37,27 +37,13 @@
     
 </ul>
 
-<h3>Data Achieved:</h3>
-<p>After using hadoop map reduce commands I achieve a data which looks like this:</p>
-<p><i>
-    "Arsenic" 	9499.0<br>
-    "Fluoride" 	33299.0<br>
-    "Iron" 	101708.0<br>
-    "Nitrate" 	2551.0<br>
-    "Salinity" 	32609.0<br>
-    MAX: "Iron" 	101708.0<br>
-    MIN: "Nitrate" 	2551.0</i>
-</p>
-<p>This data only represents the results achieved after running map reduce on 2009's data.<br>
-Similary, I ran the code on the rest of the data and achieved the same for the rest of the years.<br>
-Then, I import this data from the Virtual Machine to my windows and put it into a dataframe for the normalization and visualization part.</p>
-
-<h3>Normalization and Visualization:</h3>
-<p> This data is now imported into the dataframe. Now we can call the methods of scikit library to normalize and visualize the data henceforth.
-    <br>You can find the code in the pynb file in the repository.</p>
-</p>
-<h3>Results:</h2>
-    <a href="https://imgbb.com/"><img src="https://image.ibb.co/jqms29/Trend.png" alt="Trend" border="0"></a>
+<h3>Screenshots:</h2>
+    <a href="https://ibb.co/nP4SpK"><img src="https://preview.ibb.co/mzCrGz/1.png" alt="1" border="0"></a>
+    <a href="https://ibb.co/bwZSpK"><img src="https://preview.ibb.co/gDwwie/2a.png" alt="2a" border="0"></a>
+    <a href="https://ibb.co/fieGie"><img src="https://preview.ibb.co/cWUtUK/2b.png" alt="2b" border="0"></a>
+    <a href="https://ibb.co/hf1wie"><img src="https://preview.ibb.co/e6hf9K/3.png" alt="3" border="0"></a>
+    <a href="https://ibb.co/dDDWGz"><img src="https://preview.ibb.co/iVa09K/4.png" alt="4" border="0"></a>
+    <a href="https://ibb.co/ikqp3e"><img src="https://preview.ibb.co/fZeSpK/Database.png" alt="Database" border="0"></a>
     <p>This image shows the normalized data, it shows for each element what the trend it folows. That is, how much it's occurence in our country has changed over the course of four years. For more details, you can refer to the report included in the repository. It shows more detailed analysis of the data with more images showing how the trend for individual element has changed. </p>
 </body>
 </html>
