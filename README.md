@@ -4,7 +4,7 @@
 
 <h1> Election Commission Application:</h1>
 <hr>
-<p> I retrieve data of water contamination levels in india over a period of 4 years and use map reduce on it to get desirable knowledge out of it. I then normalize and visualize the data using sci-kit and Matplotlib library in python.</p>
+<p>This application is focused on to improve the way people make votes with the help of their aadhaar numbers. People have only one aadhar number associated with them so we can make a better use of it and implement a system, where people can quickly and easily vote to parties in their respective states with the help of this application.</p>
 
 <h3>Prerequisites & Software Required</h3>
 <p>
@@ -15,13 +15,10 @@
 </ul>
 </p>
 
-<h3>Dataset</h3>
+<h3>Database</h3>
 
-<p>The dataset is acquired from the site of data.gov.in which offer real dataset. <br>
-    The dataset is in the form of structured CSV delimited file.
-<br>The data consists of 4 years' data i.e.2009-2012. 
-<br>The dataset has 8 attributes and is really huge, just the 2009's data has over 1,80,000 rows.<br>
-You can see the sample data in the file "Sample data.csv".
+<p>The database is stored in form of a large JSON document on Firebase and an integration is performed between the database and the android app. <br>
+    Apart from this, the data of parties in the various states is stored in the form of a structured CSV delimited file.
 </p>
 
 
